@@ -6,7 +6,7 @@
 # catalog-version 1.2
 Name:		texlive-xcookybooky
 Version:	1.2
-Release:	7
+Release:	8
 Summary:	Typeset (potentially long) recipes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xcookybooky
