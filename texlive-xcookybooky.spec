@@ -1,12 +1,6 @@
-# revision 29373
-# category Package
-# catalog-ctan /macros/latex/contrib/xcookybooky
-# catalog-date 2013-03-13 15:44:34 +0100
-# catalog-license lppl1.3
-# catalog-version 1.2
 Name:		texlive-xcookybooky
-Version:	1.2
-Release:	9
+Version:	1.5
+Release:	1
 Summary:	Typeset (potentially long) recipes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xcookybooky
@@ -38,18 +32,10 @@ hint. The package depends on the Emerald fonts.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/xcookybooky/xcookybooky.cfg
-%{_texmfdistdir}/tex/latex/xcookybooky/xcookybooky.sty
-%doc %{_texmfdistdir}/doc/latex/xcookybooky/README
-%doc %{_texmfdistdir}/doc/latex/xcookybooky/example/example.pdf
-%doc %{_texmfdistdir}/doc/latex/xcookybooky/example/example.tex
-%doc %{_texmfdistdir}/doc/latex/xcookybooky/example/pic/background.pdf
-%doc %{_texmfdistdir}/doc/latex/xcookybooky/example/pic/glass.jpg
-%doc %{_texmfdistdir}/doc/latex/xcookybooky/example/pic/ingredients.jpg
-%doc %{_texmfdistdir}/doc/latex/xcookybooky/xcookybooky.pdf
+%{_texmfdistdir}/tex/latex/xcookybooky
+%doc %{_texmfdistdir}/doc/latex/xcookybooky
 #- source
-%doc %{_texmfdistdir}/source/latex/xcookybooky/xcookybooky.dtx
-%doc %{_texmfdistdir}/source/latex/xcookybooky/xcookybooky.ins
+%doc %{_texmfdistdir}/source/latex/xcookybooky
 
 #-----------------------------------------------------------------------
 %prep
