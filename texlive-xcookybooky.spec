@@ -3,7 +3,7 @@ Version:	36435
 Release:	2
 Summary:	Typeset (potentially long) recipes
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xcookybooky
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/xcookybooky
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xcookybooky.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xcookybooky.doc.r%{version}.tar.xz
