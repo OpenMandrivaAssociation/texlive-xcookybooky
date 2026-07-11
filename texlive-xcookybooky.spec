@@ -1,49 +1,26 @@
-Name:		texlive-xcookybooky
-Version:	36435
-Release:	2
+%global tl_name xcookybooky
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.5
+Release:	%{tl_revision}.1
 Summary:	Typeset (potentially long) recipes
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/xcookybooky
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xcookybooky.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xcookybooky.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xcookybooky.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xcookybooky.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xcookybooky.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/xcookybooky.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package enables the user to typeset recipes, which could be
-greater than one page. Above the recipe text two (optional)
-pictures can be displayed. Other features are recipe name,
-energy content, portions, preparation and baking time, baking
-temperatures, recipe source and of course preparation steps and
-required ingredients. At the bottom you may insert an optional
-hint. The package depends on the Emerald fonts.
+The package enables the user to typeset recipes, which could be greater
+than one page. Above the recipe text two (optional) pictures can be
+displayed. Other features are recipe name, energy content, portions,
+preparation and baking time, baking temperatures, recipe source and of
+course preparation steps and required ingredients. At the bottom you may
+insert an optional hint. The package depends on the Emerald fonts.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/xcookybooky
-%doc %{_texmfdistdir}/doc/latex/xcookybooky
-#- source
-%doc %{_texmfdistdir}/source/latex/xcookybooky
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
